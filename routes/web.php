@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 // /postsにGETリクエストが来たらPostControllerのindexメソッドを実行する。
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/', [PostController::class, 'index']);
