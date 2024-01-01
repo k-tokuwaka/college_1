@@ -9,7 +9,7 @@ class PostController extends Controller//クラスの継承（Controller→PostC
 {
     public function index(Post $post)//インポートしたPostをインスタンス化して$postとして使用。
     {
-        return view('posts.index')->with(['posts' => $post->get()]);  
-        //取得したデータ$post->get()を'posts'という変数名でViewに渡す
+        return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);  
+        //取得したデータ$post->getPaginateByLimit()を'posts'という変数名でViewに渡す
     }
 }
